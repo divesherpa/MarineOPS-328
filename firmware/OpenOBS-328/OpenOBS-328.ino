@@ -8,9 +8,11 @@
 #include "src/libs/MS5803/MS5803.h" 
 
 // Likely variables to change
-#define MS5803_VERSION 5 //comment or remove if you aren't using the pressure sensor
+//Most important is the MS5803_VERSION variable, which can be either be 2, 5, or 14
+//UofO Build 2024-12 ordered MS580314BA01-00 Pressure Sensor which is Version 14
+#define MS5803_VERSION 14 //comment or remove if you aren't using the pressure sensor
 long sleepDuration_seconds = 0; 
-const char contactInfo[] PROGMEM = "If found, please contact tlang@live.unc.edu";
+const char contactInfo[] PROGMEM = "If found, please contact openobs@schnurle.com";
 //
 
 //firmware data
