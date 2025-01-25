@@ -125,6 +125,11 @@ void setup() {
     }
   }
 
+  //Always print the serialNumber at powerup
+  EEPROM.get(SN_ADDRESS,serialNumber);
+  Serial.print(F("SN has been set to: "));
+  Serial.println(serialNumber);
+  
   //intialize & check all the modules
   startup.module.sd = sd.begin(pChipSelect, SPI_SPEED);
   if (!startup.module.sd) serialSend("SDINIT,0");
